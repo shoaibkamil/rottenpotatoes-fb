@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString4
+  description: MyTextIsADescription
+  rating: G
+  released_on: 2009-09-20 19:42:22
+
+two:
+  title: MyString2
+  description: MyTextIsADescription
+  rating: G
+  released_on: 2009-09-20 19:42:22

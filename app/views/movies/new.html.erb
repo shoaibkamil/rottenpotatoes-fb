@@ -1,0 +1,20 @@
+<h2>Add Movie</h2>
+
+<% if @movie -%>
+  <%# If TMDB returns incomplete info, bring up the standard form -%>
+  <%= render :partial => "edit" %>
+
+<% else -%>
+  <%# Otherwise, just show a search form -%>
+  <% form_tag( {:controller => :movies, :action => :find}, :method => :get) do %>
+
+    <%= label_tag :title, "Input Movie Title:" %>
+    <%= text_field_tag "title", @previous %>
+
+    <%= submit_tag "Search" %>
+  <% end %>
+<% end -%>
+
+<ul id="page_nav">
+  <li>Return to <%= link_to "Movies", movies_path %></li>
+</ul>

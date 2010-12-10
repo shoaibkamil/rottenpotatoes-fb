@@ -1,0 +1,13 @@
+<div id="facebook_connect">
+  <% if facebook_session %>
+    <span id="facebook_name">
+      Welcome, <%= facebook_session.user.first_name %>!
+      <%= link_to_function "(Logout)", "FB.Connect.logoutAndRedirect('/session/destroy')" %>
+    </span>
+    <fb:profile-pic uid="<%= facebook_session.user.uid %>" facebook_logo="true" size="thumb"/>
+  <% else %>
+    <%= fb_login_button("window.location = '/session/create'") %>
+  <% end %>
+</div>
+
+

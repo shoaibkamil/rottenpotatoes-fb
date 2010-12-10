@@ -1,0 +1,22 @@
+<h2>All Movies</h2>
+
+<table id="movies" summary="List of all the movies.">
+    <tr>
+      <th>Movie Title</th>
+      <th>Rating</th>
+      <th>Release Date</th>
+      <th>More Info</th>
+    </tr>
+  <% count_each(@movies) do |movie| %>
+    <tr class="<%= oddness(@count) %>">
+      <td><%= movie.title %></td>
+      <td><%= movie.rating %></td>
+      <td><%= movie.release_date %></td>
+      <td><%= link_to "More about #{movie.title}", movie %></td>
+    </tr>
+  <% end %>
+</table>
+
+<ul id="page_nav">
+  <li><%= link_to "Add New Movie", new_movie_path %></li>
+</ul>

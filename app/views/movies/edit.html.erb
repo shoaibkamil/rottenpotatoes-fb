@@ -1,0 +1,8 @@
+<h2>Editing <%= @movie.title %></h2>
+
+<%= render :partial => "edit" %>
+
+<ul id="page_nav">
+  <li>Back to <%= link_to "#{@movie.title}", @movie %></li>
+  <li>Return to <%= link_to "Movies", movies_path %></li>
+</ul>

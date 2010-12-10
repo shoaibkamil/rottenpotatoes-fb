@@ -1,0 +1,15 @@
+<h2><%= @movie.title %></h2>
+
+<p>Released on <%= @movie.release_date %>. Rated <%= @movie.rating %>.</p>
+
+<%= simple_format(@movie.description) %>
+
+<ul id="page_nav">
+  <li>
+    <%= link_to "Edit", edit_movie_path(@movie) %>
+    or
+    <%= link_to "Delete", movies_path, :confirm => "Delete #{@movie.title}?", :method => :delete %>
+    <em><%= @movie.title %></em>.
+  </li>
+  <li>Return to <%= link_to "Movies", movies_path %></li>
+</ul>
